@@ -12,7 +12,8 @@ SOURCES += \
     CustomTableView.cpp \
     CustomShortcutEdit.cpp \
     CustomPlayer.cpp \
-    CustomListWidget.cpp
+    CustomListWidget.cpp \
+    UpdatePrompt.cpp
 
 
 HEADERS += \
@@ -22,7 +23,8 @@ HEADERS += \
     CustomTableView.h \
     CustomShortcutEdit.h \
     CustomPlayer.h \
-    CustomListWidget.h
+    CustomListWidget.h \
+    UpdatePrompt.h
 
 
 RESOURCES += \
@@ -36,3 +38,5 @@ else:unix: LIBS += -L$$PWD/lib/ -lbass
 
 INCLUDEPATH += $$PWD/.
 DEPENDPATH += $$PWD/.
+
+include($$PWD/lib/QSimpleUpdater-2.0/QSimpleUpdater.pri)

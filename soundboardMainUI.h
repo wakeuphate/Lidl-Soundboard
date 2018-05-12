@@ -78,6 +78,8 @@
 #define VER 1.1.1
 #define VER_STRING "1.1.1"
 
+#include "UpdatePrompt.h"
+
 class SoundboardMainUI : public QWidget
 {
     Q_OBJECT
@@ -154,6 +156,8 @@ private:
                             SAVE
     ****************************************************/
     QString _saveName;
+
+    void CheckUpdate();
 
 public:
     explicit SoundboardMainUI(QWidget *parent = nullptr);

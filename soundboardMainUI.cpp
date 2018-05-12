@@ -2,6 +2,10 @@
 
 SoundboardMainUI::SoundboardMainUI(QWidget *parent) : QWidget(parent)
 {
+
+    this->setFixedWidth(400);
+    this->setMinimumHeight(600);
+
     this->setWindowTitle( "LIDL Sounboard " + QString(VER_STRING));
     this->setWindowIcon(QIcon(":/icon/resources/forsenAim.png"));
 
@@ -146,8 +150,12 @@ SoundboardMainUI::SoundboardMainUI(QWidget *parent) : QWidget(parent)
       connect(this->resultView,SIGNAL(enableButtons()),this,SLOT(enableButtons()));
       connect(this->resultView,SIGNAL(disableButtons()),this,SLOT(disableButtons()));
 
-
+      // Initializing this to empty string
       this->_saveName = "";
+
+      // checking update
+      this->show();
+      this->CheckUpdate();
 }
 
 
@@ -943,3 +951,11 @@ void SoundboardMainUI::HelpAbout()
 
     zulul->show();
 }
+
+
+void SoundboardMainUI::CheckUpdate()
+{
+    UpdatePrompt test(this);
+    test.show();
+}
+

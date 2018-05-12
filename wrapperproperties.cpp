@@ -76,12 +76,10 @@ WrapperProperties::WrapperProperties(QWidget *parent) //: QWidget(parent)
     _radioGroup->addButton(_radioAuto,3);
 
      // Displaying widget
-    _gLayout->addWidget(_radioGroupBox,1,0,1,4);
+    _gLayout->addWidget(_radioGroupBox,2,0,1,4);
 
 
 
-    //_gLayout->addWidget(_btnAdd,2,0,1,4);
-    //_gLayout->addWidget(_btnDelete,2,1,1,4);
 
 
     /*******************************************************
@@ -103,15 +101,15 @@ WrapperProperties::WrapperProperties(QWidget *parent) //: QWidget(parent)
     _shortcutWarning = new QLabel("⚠️ Don't use the same shortcut twice, it will not work.");
     _shortcutLayout->addWidget(_shortcutWarning,2,0,1,3);
 
-    _gLayout->addWidget(_shortcutGroup,2,0,1,4);
+    _gLayout->addWidget(_shortcutGroup,3,0,1,4);
 
 
     //Done button
     _btnDone = new QPushButton("Done!");
-    _gLayout->addWidget(_btnDone,3,0,1,3);
+    _gLayout->addWidget(_btnDone,4,0,1,3);
     //Abort button
     _btnAbort = new QPushButton("Abort mission");
-    _gLayout->addWidget(_btnAbort,3,3,1,1);
+    _gLayout->addWidget(_btnAbort,4,3,1,1);
 
     /*******************************************************
      *                                                     *

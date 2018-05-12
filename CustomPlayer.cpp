@@ -184,7 +184,7 @@ void CustomPlayer::SetPTTVirtualKey(int virtualKey)
 // Duration is in milli sec
 void CustomPlayer::holdPTT(int duration)
 {
-
+    qDebug() << _PTTVirtualKey, _PTTScanCode;
     // Pressing key as a SCAN CODE so that it is "physically" pressed
     keybd_event(_PTTVirtualKey,_PTTScanCode,KEYEVENTF_EXTENDEDKEY, 0);
     QTimer::singleShot(duration,this,SLOT(unHoldPTT()));
